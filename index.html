@@ -969,7 +969,7 @@ function register(){
   toast('注册成功！请登录','success');navigate('login');
 }
 function logout(){currentUser=null;currentFeed='all';localStorage.removeItem('campus_remembered');toast('已退出登录','info');navigate('home')}
-function forgotPassword(){showModal('忘记密码','<p>请联系管理员重置密码。<br>管理员邮箱：admin@campus.com</p>',[{text:'知道了',cls:'btn-primary'}])}
+function forgotPassword(){showModal('忘记密码','<p>请联系管理员重置密码。<br>管理员邮箱：ruilindeng02@gmail.com</p>',[{text:'知道了',cls:'btn-primary'}])}
 function togglePwd(inpId,togId){const inp=$(inpId),tog=$(togId);if(inp.type==='password'){inp.type='text';tog.textContent='🙈'}else{inp.type='password';tog.textContent='👁️'}}
 (function(){const r=localStorage.getItem('campus_remembered');if(r){const u=getUser(r);if(u&&!u.isBanned){currentUser=u;u.lastActive=Date.now();saveUsers(getUsers())}else{localStorage.removeItem('campus_remembered')}}})();
 
